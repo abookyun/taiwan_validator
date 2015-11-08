@@ -1,5 +1,4 @@
 require "spec_helper"
-require "ubn_validator"
 
 RSpec.describe UbnValidator do
   subject { UbnValidator }
