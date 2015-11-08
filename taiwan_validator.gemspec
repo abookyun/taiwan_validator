@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["abookyun@gmail.com"]
 
   spec.summary       = %q{Collection of useful custom validators in Taiwan for Rails applications}
-  spec.description   = %q{taiwan_validator provides a set of commonly validators for Rails applications}
+  spec.description   = %q{taiwan_validator provides a set of commonly used validators in Taiwan for Rails applications}
   spec.homepage      = "https://github.com/abookyun/taiwan_validator"
   spec.license       = "MIT"
 
