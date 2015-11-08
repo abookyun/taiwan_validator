@@ -26,6 +26,7 @@ Or install it yourself as:
 
 ```ruby
 validates :ubn, ubn: true
+validates :id, id: true
 ```
 
 ## Development
