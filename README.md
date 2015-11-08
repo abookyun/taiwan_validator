@@ -1,5 +1,7 @@
 # TaiwanValidator
 
+[![Build Status](https://travis-ci.org/abookyun/taiwan_validator.svg)](https://travis-ci.org/abookyun/taiwan_validator)
+
 TaiwanValidator provides set of commonly used validators in Taiwan for Rails applications.
 
 ## Installation
