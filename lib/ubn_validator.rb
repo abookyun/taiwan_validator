@@ -14,7 +14,7 @@ class UbnValidator < ActiveModel::EachValidator
         digit
       end.inject(&:+)
 
-      results % 10 == 0 ? true : false
+      results % 10 == 0
     end
 
     private

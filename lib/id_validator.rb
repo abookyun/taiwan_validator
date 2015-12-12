@@ -20,7 +20,7 @@ class IdValidator < ActiveModel::EachValidator
       digits = (VALID_FIRST_LETTER[id[0]].to_s.chars + id[1..9].to_s.chars).map(&:to_i)
       results = digits.zip(MULTIPLIER).map { |r| r.inject(&:*) }.inject(&:+)
 
-      results % 10 == 0 ? true : false
+      results % 10 == 0
     end
   end
 
