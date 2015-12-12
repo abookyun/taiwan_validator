@@ -1,7 +1,7 @@
-class AddressValidator < ActiveModel::EachValidator
+class TaiwanValidator::PhoneNumberValidator < ActiveModel::EachValidator
   class << self
-    def valid?(address)
-      /(\A\d{3,5})?\s?(\D+[縣市])(\D+[鄉鎮市區])?(.+)/.match(address)
+    def valid?(phone_number)
+      phone_number.gsub(/[\+\-\s]/, "") =~ /\A(886|0)[2-9]([0-9]{6,8})\z/
     end
   end
 
