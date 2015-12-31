@@ -25,6 +25,8 @@ Or install it yourself as:
 ## Usage
 
 ```ruby
+include TaiwanValidator
+
 validates :ubn, ubn: true
 validates :id, id: true
 validates :address, address: true
