@@ -1,4 +1,4 @@
-class UbnValidator < ActiveModel::EachValidator
+class TaiwanValidator::UbnValidator < ActiveModel::EachValidator
   MULTIPLIER = [1,2,1,2,1,2,4,1].freeze
 
   class << self

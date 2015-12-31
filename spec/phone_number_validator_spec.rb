@@ -1,7 +1,7 @@
 require "spec_helper"
 
-RSpec.describe PhoneNumberValidator do
-  subject { PhoneNumberValidator }
+RSpec.describe TaiwanValidator::PhoneNumberValidator do
+  subject { TaiwanValidator::PhoneNumberValidator }
 
   describe ".valid?" do
     it "accepts +886 as start digits" do

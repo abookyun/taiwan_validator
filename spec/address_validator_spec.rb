@@ -1,7 +1,7 @@
 require "spec_helper"
 
-RSpec.describe AddressValidator do
-  subject { AddressValidator }
+RSpec.describe TaiwanValidator::AddressValidator do
+  subject { TaiwanValidator::AddressValidator }
 
   describe ".valid?" do
     it "accepts zipcode as a start" do

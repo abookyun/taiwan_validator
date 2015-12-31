@@ -1,7 +1,7 @@
 require "spec_helper"
 
-RSpec.describe IdValidator do
-  subject { IdValidator }
+RSpec.describe TaiwanValidator::IdValidator do
+  subject { TaiwanValidator::IdValidator }
 
   describe ".valid?" do
     it "returns false when id size != 10" do

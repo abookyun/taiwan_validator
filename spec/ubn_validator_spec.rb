@@ -1,7 +1,7 @@
 require "spec_helper"
 
-RSpec.describe UbnValidator do
-  subject { UbnValidator }
+RSpec.describe TaiwanValidator::UbnValidator do
+  subject { TaiwanValidator::UbnValidator }
 
   describe ".valid?" do
     it "accepts interger as well" do

@@ -1,4 +1,4 @@
-class IdValidator < ActiveModel::EachValidator
+class TaiwanValidator::IdValidator < ActiveModel::EachValidator
   MULTIPLIER = [1,9,8,7,6,5,4,3,2,1,1].freeze
   FIRST_LETTER = HashWithIndifferentAccess.new(
     A: 10, B: 11, C: 12, D: 13, E: 14,
