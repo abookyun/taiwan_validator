@@ -4,4 +4,7 @@ source 'https://rubygems.org'
 gemspec
 
 # CodeClimate Test Coverage
-gem "codeclimate-test-reporter", group: :test, require: nil
+group :test do
+  gem "simplecov", require: nil
+  gem "codeclimate-test-reporter", require: nil
+end
