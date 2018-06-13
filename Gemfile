@@ -5,6 +5,5 @@ gemspec
 
 # CodeClimate Test Coverage
 group :test do
-  gem "simplecov", require: nil
-  gem "codeclimate-test-reporter", require: nil
+  gem 'simplecov', require: false, group: :test
 end
