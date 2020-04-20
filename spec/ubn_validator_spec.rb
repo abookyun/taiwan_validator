@@ -27,15 +27,13 @@ RSpec.describe TaiwanValidator::UbnValidator do
     it "returns true with correct example(b)" do
       expect(subject.valid?("10458575")).to be_truthy
     end
-  end
 
-  describe ".number_digits" do
-    it "returns digits length for number" do
-      expect(subject.send(:number_digits, 104)).to eq 3
+    it "returns true with correct example(c)" do
+      expect(subject.valid?("16894172")).to be_truthy
     end
 
-    it "returns 1 when meets 0" do
-      expect(subject.send(:number_digits, 0)).to eq 1
+    it "returns true with correct example(d)" do
+      expect(subject.valid?("10458575")).to be_truthy
     end
   end
 

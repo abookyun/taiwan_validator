@@ -4,23 +4,29 @@ class TaiwanValidator::UbnValidator < ActiveModel::EachValidator
   class << self
     def valid?(ubn)
       ubn = ubn.to_s
-      return false if ubn.size != 8 || (ubn =~ /\A\d+\Z/).nil?
+      return false unless ubn.match?(/\A\d{8}\z/)
 
       digits = ubn.chars.map(&:to_i)
       results = digits.zip(MULTIPLIER).map do |op1, op2|
         digit = op1 * op2
-        digit = digit.to_s.chars.map(&:to_i).reduce(&:+) if number_digits(digit) == 2
-        digit = digit.to_s.chars.last.to_i if number_digits(digit) == 2
-        digit
-      end.inject(&:+)
+        next digit if digit < 10
 
-      results % 10 == 0
-    end
+        digit = (digit / 10) + (digit % 10)
+        next digit if digit < 10
 
-    private
+        [digit / 10, digit % 10]
+      end
 
-    def number_digits(number)
-      number.zero? ? 1 : Math.log10(number).to_i + 1
+      known_answers = results.select{ |x| x.is_a?(Numeric) }.inject(&:+)
+      possible_answers = results.reject{ |x| x.is_a?(Numeric) }.flatten
+
+      if possible_answers.empty?
+        return known_answers % 10 == 0
+      end
+
+      possible_answers.any? do |possible_answer|
+        (possible_answer + known_answers) % 10 == 0
+      end
     end
   end
 
