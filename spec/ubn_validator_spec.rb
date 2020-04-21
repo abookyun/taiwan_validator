@@ -20,12 +20,40 @@ RSpec.describe TaiwanValidator::UbnValidator do
       expect(subject.valid?("0" * 8)).to be_truthy
     end
 
-    it "returns true with correct example(a)" do
+    it "returns true when ubn is 04595257" do
       expect(subject.valid?("04595257")).to be_truthy
     end
 
-    it "returns true with correct example(b)" do
+    it "returns true when ubn is 16894172" do
+      expect(subject.valid?("16894172")).to be_truthy
+    end
+
+    it "returns true when ubn is 04595257" do
+      expect(subject.valid?("04595257")).to be_truthy
+    end
+
+    it "returns true when ubn is 54049493" do
+      expect(subject.valid?("54049493")).to be_truthy
+    end
+
+    it "returns true when ubn is 55667788" do
+      expect(subject.valid?("55667788")).to be_truthy
+    end
+
+    it "returns true when ubn is 10458575 and 7th digit is '7'" do
       expect(subject.valid?("10458575")).to be_truthy
+    end
+
+    it "returns true when ubn is 70664079 and 7th digit is '7'" do
+      expect(subject.valid?("70664079")).to be_truthy
+    end
+
+    it "returns true when ubn is 16894172 and 7th digit is '7'" do
+      expect(subject.valid?("16894172")).to be_truthy
+    end
+
+    it "returns true when ubn is 00238778 and 7th digit is '7'" do
+      expect(subject.valid?("00238778")).to be_truthy
     end
   end
 
