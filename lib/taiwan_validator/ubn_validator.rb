@@ -10,11 +10,10 @@ class TaiwanValidator::UbnValidator < ActiveModel::EachValidator
       results = digits.zip(MULTIPLIER).map do |op1, op2|
         digit = op1 * op2
         digit = digit.to_s.chars.map(&:to_i).reduce(&:+) if number_digits(digit) == 2
-        digit = digit.to_s.chars.last.to_i if number_digits(digit) == 2
         digit
       end.inject(&:+)
 
-      results % 10 == 0
+      results % 10 == 0 || (ubn[6] == "7" && (results + 1) % 10 == 0)
     end
 
     private
