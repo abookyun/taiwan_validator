@@ -4,7 +4,7 @@ class TaiwanValidator::UbnValidator < ActiveModel::EachValidator
   class << self
     def valid?(ubn)
       ubn = ubn.to_s
-      return false if ubn.size != 8 || (ubn =~ /\A\d+\Z/).nil?
+      return false unless ubn.match?(/\A\d{8}\z/)
 
       digits = ubn.chars.map(&:to_i)
       results = digits.zip(MULTIPLIER).map do |op1, op2|
