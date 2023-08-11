@@ -5,5 +5,6 @@ gemspec
 
 # CodeClimate Test Coverage
 group :test do
-  gem 'simplecov', require: false, group: :test
+  gem "simplecov", require: false, group: :test
+  gem "simplecov_json_formatter", require: false, group: :test
 end
