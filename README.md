@@ -1,6 +1,6 @@
 # TaiwanValidator
 
-[![Build Status](https://app.travis-ci.com/abookyun/taiwan_validator.svg)](https://app.travis-ci.com/github/abookyun/taiwan_validator)
+[![build](https://github.com/abookyun/taiwan_validator/actions/workflows/build.yml/badge.svg)](https://github.com/abookyun/taiwan_validator/actions/workflows/build.yml)
 [![Code Climate](https://codeclimate.com/github/abookyun/taiwan_validator/badges/gpa.svg)](https://codeclimate.com/github/abookyun/taiwan_validator)
 [![Test Coverage](https://codeclimate.com/github/abookyun/taiwan_validator/badges/coverage.svg)](https://codeclimate.com/github/abookyun/taiwan_validator/coverage)
 
