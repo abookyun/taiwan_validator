@@ -16,22 +16,17 @@ jobs:
         ruby-version: ['3.1', '3.2', '3.3', '3.4']
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: ${{ matrix.ruby-version }}
           bundler-cache: true
 
-      - name: Install Dependency
-        run: |
-          gem install bundler
-          bundle install
-
       - name: Run tests
         run: bundle exec rspec
 
       - name: Publish code coverage
-        uses: paambaati/codeclimate-action@v4
+        uses: paambaati/codeclimate-action@v9
         env:
           CC_TEST_REPORTER_ID: 85915b296b49680c2c4fd50d2be8f76cc094409297c63b37cf15c145968f1e91
