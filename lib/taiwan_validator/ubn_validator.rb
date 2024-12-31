@@ -13,7 +13,7 @@ class TaiwanValidator::UbnValidator < ActiveModel::EachValidator
         digit
       end.inject(&:+)
 
-      results % 10 == 0 || (ubn[6] == "7" && (results + 1) % 10 == 0)
+      results % 5 == 0 || (ubn[6] == "7" && (results + 1) % 5 == 0)
     end
 
     private
